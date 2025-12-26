@@ -1,4 +1,6 @@
-/* Reset básico */
+/* =====================
+   RESET BÁSICO
+===================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +8,21 @@
     font-family: Arial, sans-serif;
 }
 
-/* BODY */
+/* =====================
+   BODY
+===================== */
 body {
     background-color: #f5f5f5;
     color: #333;
 }
 
-/* HEADER */
+/* =====================
+   HEADER / NAV
+===================== */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px 30px;
+    padding: 16px 24px;
 }
 
 header nav {
@@ -26,9 +32,10 @@ header nav {
 }
 
 header h1 {
-    font-size: 28px;
+    font-size: 26px;
 }
 
+/* MENÚ NORMAL (DESKTOP) */
 header ul {
     list-style: none;
     display: flex;
@@ -44,19 +51,34 @@ header ul li:hover {
     color: #ddd;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* =====================
+   BOTÓN HAMBURGUESA
+===================== */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =====================
+   CONTENEDOR PRINCIPAL
+===================== */
 .main-container {
     display: flex;
     gap: 25px;
     padding: 25px;
 }
 
-/* CONTENIDO PRINCIPAL */
+/* =====================
+   CONTENIDO PRINCIPAL
+===================== */
 .main-container > div:first-child {
     flex: 3;
 }
 
-/* Bienvenida */
+/* =====================
+   BIENVENIDA
+===================== */
 .welcome {
     margin-bottom: 25px;
 }
@@ -66,7 +88,9 @@ header ul li:hover {
     color: #4CAF50;
 }
 
-/* Cursos */
+/* =====================
+   CURSOS
+===================== */
 .courses {
     display: grid;
     grid-template-columns: 1fr;
@@ -76,7 +100,7 @@ header ul li:hover {
 .course-card {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* 🔥 CLAVE */
+    align-items: center;
     border-radius: 12px;
     overflow: hidden;
     background-color: white;
@@ -95,7 +119,7 @@ header ul li:hover {
     flex: 1;
 }
 
-/* Cuadro de color */
+/* ICONO */
 .course-icon {
     width: 80px;
     color: white;
@@ -105,13 +129,12 @@ header ul li:hover {
     align-items: center;
 }
 
-/* Colores por materia */
 .course-icon.matematica { background-color: #2196F3; }
 .course-icon.historia { background-color: #4CAF50; }
 .course-icon.quimica { background-color: #FF9800; }
 .course-icon.ingles { background-color: #9C27B0; }
 
-/* Información */
+/* INFO */
 .course-info {
     padding: 20px 25px;
 }
@@ -126,7 +149,7 @@ header ul li:hover {
     color: #555;
 }
 
-/* Botón */
+/* BOTÓN */
 .btn {
     background-color: #4CAF50;
     color: white;
@@ -136,7 +159,7 @@ header ul li:hover {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     height: 45px;
-    margin-right: 25px; /* 🔥 SOLUCIÓN DEFINITIVA */
+    margin-right: 25px;
 }
 
 .btn:hover {
@@ -144,7 +167,9 @@ header ul li:hover {
     transform: scale(1.05);
 }
 
-/* PANEL LATERAL */
+/* =====================
+   PANEL LATERAL
+===================== */
 .side-panel {
     flex: 1;
     display: flex;
@@ -152,7 +177,6 @@ header ul li:hover {
     gap: 25px;
 }
 
-/* Paneles */
 .panel-box {
     background-color: white;
     padding: 20px;
@@ -167,7 +191,9 @@ header ul li:hover {
     font-size: 18px;
 }
 
-/* Tareas */
+/* =====================
+   TAREAS
+===================== */
 .task {
     background-color: #f9f9f9;
     padding: 12px 15px;
@@ -187,7 +213,9 @@ header ul li:hover {
     margin-bottom: 5px;
 }
 
-/* Calendario */
+/* =====================
+   CALENDARIO
+===================== */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -213,3 +241,65 @@ header ul li:hover {
     color: white;
     font-weight: bold;
 }
+
+/* =====================
+   RESPONSIVE (MÓVIL)
+===================== */
+@media (max-width: 768px) {
+
+    /* NAV */
+    header nav {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        width: 100%;
+        flex-direction: column;
+        background-color: #4CAF50;
+        display: none;
+        margin-top: 15px;
+    }
+
+    header ul.active {
+        display: flex;
+    }
+
+    header ul li {
+        padding: 12px;
+        border-top: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* LAYOUT */
+    .main-container {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .course-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .course-left {
+        flex-direction: row;
+    }
+
+    .btn {
+        width: 90%;
+        margin: 15px auto 20px;
+    }
+
+    .side-panel {
+        margin-top: 20px;
+    }
+
+    .calendar-grid div {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
