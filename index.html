@@ -2,26 +2,38 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Plataforma Educativa</title>
+
+    <!-- NECESARIO PARA RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plataforma Educativa – Versión A</title>
     <link rel="stylesheet" href="css/style-a.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <h1>Plataforma Educativa</h1>
-        <ul>
+<header class="header">
+    <nav class="nav">
+
+        <h1 class="logo">Plataforma Educativa</h1>
+
+        <!-- BOTÓN MENÚ (solo móvil) -->
+        <button class="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <ul class="menu">
             <li>Inicio</li>
             <li>Mis Cursos</li>
             <li>Calendario</li>
             <li>Perfil</li>
         </ul>
+
     </nav>
 </header>
 
 <div class="main-container">
 
-    <div>
+    <main class="content">
         <div class="welcome">
             <h2>Bienvenido, Carlos</h2>
         </div>
@@ -73,9 +85,9 @@
             </div>
 
         </div>
-    </div>
+    </main>
 
-    <div class="side-panel">
+    <aside class="side-panel">
 
         <div class="panel-box">
             <h3>Tareas Próximas</h3>
@@ -87,17 +99,14 @@
 
             <div class="task">
                 <strong>Examen de Química</strong>
-                <p>el 18 abril</p>
+                <p>18 de abril</p>
             </div>
         </div>
 
         <div class="panel-box calendar">
             <h4>Abril 2024</h4>
             <div class="calendar-grid">
-                <!-- Encabezado de días -->
                 <div>L</div><div>M</div><div>M</div><div>J</div><div>V</div><div>S</div><div>D</div>
-
-                <!-- Días del mes completos -->
                 <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
                 <div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
                 <div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div>
@@ -106,10 +115,17 @@
             </div>
         </div>
 
-    </div>
+    </aside>
 </div>
+
+<!-- JS MENÚ SIMPLE VERSION A -->
+<script src="js/menu-a.js"></script>
+
+</body>
+</html>
 
 </body>  
 </html>
+
 
 
