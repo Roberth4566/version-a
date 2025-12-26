@@ -1,0 +1,215 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 30px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header ul li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header ul li:hover {
+    color: #ddd;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-container > div:first-child {
+    flex: 3;
+}
+
+/* Bienvenida */
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    color: #4CAF50;
+}
+
+/* Cursos */
+.courses {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.course-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 🔥 CLAVE */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.course-left {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+}
+
+/* Cuadro de color */
+.course-icon {
+    width: 80px;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Colores por materia */
+.course-icon.matematica { background-color: #2196F3; }
+.course-icon.historia { background-color: #4CAF50; }
+.course-icon.quimica { background-color: #FF9800; }
+.course-icon.ingles { background-color: #9C27B0; }
+
+/* Información */
+.course-info {
+    padding: 20px 25px;
+}
+
+.course-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.course-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Botón */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    height: 45px;
+    margin-right: 25px; /* 🔥 SOLUCIÓN DEFINITIVA */
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* PANEL LATERAL */
+.side-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Paneles */
+.panel-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.panel-box h3,
+.panel-box h4 {
+    margin-bottom: 15px;
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+/* Tareas */
+.task {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.task strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Calendario */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.calendar-grid div {
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.calendar-grid div:hover {
+    background-color: #c8e6c9;
+}
+
+.calendar-grid .active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
